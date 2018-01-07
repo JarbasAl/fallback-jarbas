@@ -1,0 +1,29 @@
+{
+    "name": "Jarbas Server Fallback",
+    "skillMetadata": {
+        "sections": [
+            {
+                "name": "URL",
+                "fields": [
+                    {
+                        "name": "email",
+                        "type": "email",
+                        "label": "url",
+                        "value": "https://104.236.133.170:6712/"
+                    }
+                ]
+            },
+          {
+                "name": "API Key",
+                "fields": [
+                    {
+                        "name": "api_key",
+                        "type": "text",
+                        "label":"api_key",
+                        "value": ""
+                    }
+                ]
+            }
+        ]
+    }
+}
