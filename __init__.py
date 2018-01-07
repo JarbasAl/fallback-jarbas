@@ -28,9 +28,10 @@ __author__ = "jarbas"
 class JarbasServerSkill(FallbackSkill):
     def __init__(self):
         super(JarbasServerSkill, self).__init__()
-        config = self.config_core.get("server", {})
-        url = config.get("url", "https://104.236.133.170:6712")
-        self.https_api = JarbasAPI(api, self.lang, url)
+
+    def initialize(self):
+        self.https_api = JarbasAPI(api, self.lang, self.settings["url"])
+        self.register_fallback(self.handle_fallback, 97)
 
     def handle_fallback(self, message):
         utterance = message.data['utterance']
